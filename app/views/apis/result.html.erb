@@ -12,7 +12,7 @@
 
 			<% unless @github_repos.empty? %>
 			<h4>Github repositories</h4>
-			<h5> Date of Joining: <%= @github_user["created_at"].to_time.strftime("%A, %B %d %Y") %></h5>
+			
 			<ul class="list-group">
 			  <% @github_repos.each do |gr|%>
 			    <li class="list-group-item"><%= gr %></li>
