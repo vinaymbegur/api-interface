@@ -2,10 +2,20 @@ class ApisController < ApplicationController
 
 	include API
 
+	# Root action and renders a index page which contains a form
+	# to take usernames of twitter, github or rubygems
+	#
 	def index
 
 	end
 
+	# Usernames will get submitted here as POST
+	# Hits api's of twitter, github and rubygems
+	# If any erros between api interactions, corresponding
+	# variables will be assigned with empty in rescue block
+	# Renders results page and displays the data collected 
+	# from apis with download option
+	#
 	def result
 		username = params[:username]
 

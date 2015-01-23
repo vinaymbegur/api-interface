@@ -44,21 +44,30 @@ end
 # Use debugger
 gem 'debugger', group: [:development, :test]
 
+# Ruby interface to github
 gem "github_api"
+
+# A Ruby interface to the Twitter API
 gem "twitter"
+
+# Ruby wrapper for the RubyGems.org API
 gem "gems"
 
+# Typhoeus wraps libcurl in order to make fast and reliable requests.
 gem "typhoeus"
 
-gem 'prawn-rails'
-
+# Twitter Bootstrap
 gem "less-rails"
 gem 'twitter-bootstrap-rails'
 
+ group :production do
+   gem 'pg'
+   gem 'rails_12factor' 
+ end
+
 
 group :test, :development do
-  
- #TODO point this back to default gem once bug is gone - https://github.com/rspec/rspec-expectations/commit/f4efada6c86b840802a18e3de12ea68279f9030f
+
  gem "rspec-rails", "2.11.0"
  gem "rspec-expectations"
  gem "shoulda-matchers"
@@ -71,10 +80,5 @@ group :test, :development do
  gem "awesome_print"
  gem "selenium-webdriver", "~> 2.43.0"
  gem "thin", "~> 1.6.1"
-
- group :production do
-   gem 'pg'
-   gem 'rails_12factor' 
- end
 
 end
