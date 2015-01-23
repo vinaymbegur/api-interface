@@ -72,4 +72,8 @@ group :test, :development do
  gem "selenium-webdriver", "~> 2.43.0"
  gem "thin", "~> 1.6.1"
 
+ group :production do
+   gem 'rails_12factor' 
+ end
+
 end
