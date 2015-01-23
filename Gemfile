@@ -73,6 +73,7 @@ group :test, :development do
  gem "thin", "~> 1.6.1"
 
  group :production do
+   gem 'pg'
    gem 'rails_12factor' 
  end
 
